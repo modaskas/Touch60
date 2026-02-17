@@ -1,0 +1,26 @@
+if SHIELD_TOUCH60
+
+# Name must be less than 16 characters long!
+config ZMK_KEYBOARD_NAME
+    default "Touch60"
+
+config ZMK_POINTING
+    default y
+
+endif
+
+# ---------------------
+# Kconfig for shield "touch60" with board "nice_nano_v2"
+# ---------------------
+if BOARD_NICE_NANO_V2 && SHIELD_TOUCH60
+
+config SPI
+    default y
+
+config WS2812_STRIP
+    default y
+
+config I2C
+    default y
+
+endif

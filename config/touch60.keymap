@@ -1,28 +1,39 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/rgb.h>
 
 / {
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        Base {
             display-name = "Base";
             bindings = <
 &kp ESCAPE     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5  &kp NUMBER_6  &kp N7  &kp N8  &kp N9     &kp N0             &kp MINUS         &kp EQUAL          &kp BACKSPACE
 &kp TAB        &kp Q         &kp W         &kp E         &kp R         &kp T   &kp Y         &kp U   &kp I   &kp O      &kp P              &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH
 &kp CAPSLOCK   &kp A         &kp S         &kp D         &kp F         &kp G   &kp H         &kp J   &kp K   &kp L      &kp SEMICOLON      &kp SQT           &kp ENTER
 &kp LSHFT                    &kp Z         &kp X         &kp C         &kp V   &kp B         &kp N   &kp M   &kp COMMA  &kp PERIOD         &kp SLASH         &kp RIGHT_SHIFT
-&kp LC(LCTRL)  &kp LG(C)     &kp LA(LALT)                                      &kp SPACE                                &kp RA(RIGHT_ALT)  &mo 1             &kp RC(RCTRL)      &kp I
+&kp LC(LCTRL)  &kp LG(C)     &kp LA(LALT)                                      &kp SPACE                                &kp RA(RIGHT_ALT)  &mo 1             &kp RC(RCTRL)      &mo 2
             >;
         };
 
-        layer_1 {
+        Extras {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans                          &trans                          &trans  &trans  &trans  &trans
+            >;
+        };
+
+        Leds {
+            bindings = <
+&rgb_ug RGB_TOG  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans           &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans           &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans                   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans           &trans  &trans                          &trans                          &trans  &trans  &trans  &trans
             >;
         };
     };

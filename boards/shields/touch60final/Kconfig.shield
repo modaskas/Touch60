@@ -1,0 +1,2 @@
+config SHIELD_TOUCH60FINAL
+    def_bool $(shields_list_contains,touch60final)

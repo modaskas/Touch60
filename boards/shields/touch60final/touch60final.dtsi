@@ -40,3 +40,8 @@
     };
 };
 
+    glidepoint_listener {
+        compatible = "zmk,input-listener";
+        device = <&glidepoint>;
+    };
+};

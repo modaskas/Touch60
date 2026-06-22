@@ -45,6 +45,7 @@
         compatible = "cirque,pinnacle";
         reg = <0x2a>;
         dr-gpios = <&pro_micro 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+        y-invert;
         sleep;
         no-secondary-tap;
         sensitivity = "2x";

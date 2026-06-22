@@ -42,6 +42,5 @@
     glidepoint_listener {
         compatible = "zmk,input-listener";
         device = <&input_device_unibody0>;
-        input-processors = <&zip_y_transform>;
     };
 };
